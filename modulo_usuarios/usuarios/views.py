@@ -10,15 +10,6 @@ def inicio(request):
     template = loader.get_template('inicio.html')
     return HttpResponse(template.render())
 
-# def registros(request):
-#     template = loader.get_template('registros.html')
-#     usuarios = Usuario.objects.all().values()
-#     context = {
-#         'registros_html': usuarios
-#     }
-
-#     return HttpResponse(template.render(context, request))
-
 def registros(request):
     usuarios = Usuario.objects.all()
     return render(request, 'registros.html', {'registros_html': usuarios})
