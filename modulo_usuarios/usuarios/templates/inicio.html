@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Estudiantes</title>
+    <link rel="stylesheet" href="{% static 'inicio.css' %}">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="icono">🏫</div>
+        <h1>Consulta de Estudiantes</h1>
+        <div class="linea">
+            <span>🤎</span>
+        </div>
+        <h2>¡Bienvenidos!</h2>
+        <p>
+            Este sistema nos permite consultar de manera rapida y organizada los registros de 
+            los estudiantes almacenados en la base de datos
+        </p>
+        <a href="{% url 'registros' %}">📝 Ver registros →</a>
+    </div>
+</body>
+</html>
